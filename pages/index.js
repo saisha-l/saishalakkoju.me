@@ -38,9 +38,13 @@ export default function Home() {
 
         <h1 className={styles.centered2}>Experience</h1>
         <div className={styles.col1}>
-          <Popup trigger={<div className={styles.card}><h3>Market & Data Analyst, Business Impact Group &rarr;</h3></div>} modal>
+          <Popup trigger={<div className={styles.card}>
+            <h3>Market & Data Analyst, Business Impact Group &rarr;</h3>
+            <p>Accelerating growth for SMBs in the Seattle area through delivering data-driven insights. Strengthening stakeholder relationships, by presenting research in an accessible format using data visualization to present strategies to increase capital.</p>
+            </div>} modal>
             {close => (
-              <div>
+              <div className={styles.cardpopup}>
+                <img className={styles.img2} src={'./bigUWlogo.png'}/>
                 <h3>Market & Data Analyst, Business Impact Group</h3>
                 <p>Accelerating growth for SMBs in the Seattle area through delivering data-driven insights. Strengthening stakeholder relationships, by presenting research in an accessible format using data visualization to present strategies to increase capital.</p>
                 <button onClick={close} className={styles.closeButton}>Close</button>
@@ -48,9 +52,12 @@ export default function Home() {
             )}
           </Popup>
 
-          <Popup trigger={<div className={styles.card}><h3>Research Intern, Fred Hutchinson Cancer Center &rarr;</h3></div>} modal>
+          <Popup trigger={<div className={styles.card}>
+            <h3>Research Intern, Fred Hutchinson Cancer Center &rarr;</h3>
+            <p>Currently working under the director of the Human Biology department, Dr. Eric Holland. Utilizing R and ML to analyze RNA-Seq data to understand molecular basis for different types of cancers.</p>
+            </div>} modal>
             {close => (
-              <div>
+              <div className={styles.cardpopup}>
                 <h3>Research Intern, Fred Hutchinson Cancer Center</h3>
                 <p>Currently working under the director of the Human Biology department, Dr. Eric Holland. Utilizing R and ML to analyze RNA-Seq data to understand molecular basis for different types of cancers.</p>
                 <button onClick={close} className={styles.closeButton}>Close</button>
@@ -58,9 +65,12 @@ export default function Home() {
             )}
           </Popup>
 
-          <Popup trigger={<div className={styles.card}><h3>Research Intern, University of Washington Medicine &rarr;</h3></div>} modal>
+          <Popup trigger={<div className={styles.card}>
+            <h3>Research Intern, University of Washington Medicine &rarr;</h3>
+            <p>Analyzing paralysis and lifespan assays on C. Elegans nematode worm for pre-clinical screening of therapeutic agents for age-related diseases such as Parkinsons and Alzheimers.</p>
+            </div>} modal>
             {close => (
-              <div>
+              <div className={styles.cardpopup}>
                 <h3>Research Intern, University of Washington Medicine</h3>
                 <p>Analyzing paralysis and lifespan assays on C. Elegans nematode worm for pre-clinical screening of therapeutic agents for age-related diseases such as Parkinsons and Alzheimers.</p>
                 <button onClick={close} className={styles.closeButton}>Close</button>
@@ -68,59 +78,9 @@ export default function Home() {
             )}
           </Popup>
 
-          <Popup trigger={<div className={styles.card}><h3>Deploy &rarr;</h3></div>} modal>
-            {close => (
-              <div>
-                <h3>Deploy</h3>
-                <p>Instantly deploy your Next.js site to a public URL with Vercel.</p>
-                <button onClick={close} className={styles.closeButton}>Close</button>
-              </div>
-            )}
-          </Popup>
         </div>
 
-        <h1>Projects</h1>
-        <div className={styles.col1}>
-          <Popup trigger={<div className={styles.card}><h3>Documentation &rarr;</h3></div>} modal>
-            {close => (
-              <div>
-                <h3>Documentation</h3>
-                <p>Find in-depth information about Next.js features and API.</p>
-                <button onClick={close} className={styles.closeButton}>Close</button>
-              </div>
-            )}
-          </Popup>
-
-          <Popup trigger={<div className={styles.card}><h3>Learn &rarr;</h3></div>} modal>
-            {close => (
-              <div>
-                <h3>Learn</h3>
-                <p>Learn about Next.js in an interactive course with quizzes!</p>
-                <button onClick={close} className={styles.closeButton}>Close</button>
-              </div>
-            )}
-          </Popup>
-
-          <Popup trigger={<div className={styles.card}><h3>Examples &rarr;</h3></div>} modal>
-            {close => (
-              <div>
-                <h3>Examples</h3>
-                <p>Discover and deploy boilerplate example Next.js projects.</p>
-                <button onClick={close} className={styles.closeButton}>Close</button>
-              </div>
-            )}
-          </Popup>
-
-          <Popup trigger={<div className={styles.card}><h3>Deploy &rarr;</h3></div>} modal>
-            {close => (
-              <div>
-                <h3>Deploy</h3>
-                <p>Instantly deploy your Next.js site to a public URL with Vercel.</p>
-                <button onClick={close} className={styles.closeButton}>Close</button>
-              </div>
-            )}
-          </Popup>
-        </div>
+       
       </main>
 
       <footer>

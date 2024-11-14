@@ -98,6 +98,12 @@
   
 }
 
+
+.img2{
+  max-height: 100pt;
+  
+}
+
 .col1 {
   display: flex;
   align-items: center;
@@ -114,6 +120,22 @@
   padding: 1.5rem;
   text-align: left;
   color: inherit;
+  text-decoration: none;
+  border: 1px solid #eaeaea;
+  border-radius: 10px;
+  transition:
+    color 0.15s ease,
+    border-color 0.15s ease;
+}
+
+
+.cardpopup {
+  margin: 1rem;
+  flex-basis: 45%;
+  padding: 1.5rem;
+  text-align: left;
+  background-color: whitesmoke;
+  box-shadow: inset;
   text-decoration: none;
   border: 1px solid #eaeaea;
   border-radius: 10px;
