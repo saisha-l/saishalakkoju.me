@@ -5,7 +5,7 @@ import { TypeAnimation } from 'react-type-animation';
 
 export default function Home() {
   return (
-    <div className={styles.container}>
+    <div className={styles.grid}>
       <Head>
       
         <link rel="icon" href="/favicon.ico" />
@@ -14,21 +14,60 @@ export default function Home() {
       <main>
         <h1 className={styles.title}>
         <TypeAnimation
-          sequence={['Saisha Lakkoju']}
+          sequence={['Saisha Lakkoju.']}
           wrapper="div"
-          cursor={true}
+          cursor={false}
           style={{ fontSize: '3em' }}
-          repeat={Infinity}
+          repeat={0}
         />
-          
+      
         </h1>
-        
 
-        <p className={styles.description}>
-          Get started by editing <code>pages/index.js</code>
-        </p>
+        <text className={styles.centered1}> 
+        Computer Science Student @ University of Washington
+        </text>
+        <text className={styles.centered}> 
+        Researcher and analyst with a passion for applying data science and technology to solve real world problems across healthcare and business domains. 
+        </text>
 
-        <div className={styles.grid}>
+        <h1 className={styles.centered2}> Experience </h1>
+
+        <div className={styles.col1}>
+          <a href="https://nextjs.org/docs" className={styles.card}>
+            <h3>Market & Data Analyst, Business Impact Group &rarr;</h3>
+            <p>Accelerating growth for SMBs in the Seattle area through delivering data-driven insights. Strengthening stakeholder relationships, by presenting research in an accessible format using data visualization to present strategies to increase capital.</p>
+          </a>
+
+          <a href="https://nextjs.org/learn" className={styles.card}>
+            <h3>Research Intern, Fred Hutchinson Cancer Center &rarr;</h3>
+            <p>Currently working under the director of the Human Biology department, Dr. Eric Holland. Utilizing R and ML to analyze RNA-Seq data to understand molecular basis for different types of cancers.</p>
+          </a>
+
+          <a
+            href="https://github.com/vercel/next.js/tree/canary/examples"
+            className={styles.card}
+          >
+            <h3>Research Intern, University of Washington Medicine &rarr;</h3>
+            <p>
+        Analyzing paralysis and lifespan assays on C. Elegans nematode worm for pre-clinical screening of therapeutic agents  for age-related diseases such as Parkinsons and Alzheimers.
+            </p>
+
+          </a>
+
+          <a
+            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
+            className={styles.card}
+          >
+            <h3>Deploy &rarr;</h3>
+            <p>
+              Instantly deploy your Next.js site to a public URL with Vercel.
+            </p>
+          </a>
+        </div>
+
+        <h1> Projects </h1>
+
+        <div className={styles.col1}>
           <a href="https://nextjs.org/docs" className={styles.card}>
             <h3>Documentation &rarr;</h3>
             <p>Find in-depth information about Next.js features and API.</p>
@@ -57,6 +96,7 @@ export default function Home() {
             </p>
           </a>
         </div>
+
       </main>
 
       <footer>
