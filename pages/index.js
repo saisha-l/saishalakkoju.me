@@ -2,7 +2,6 @@ import Head from 'next/head';
 import styles from '../styles/Home.module.css';
 import React from 'react';
 import { TypeAnimation } from 'react-type-animation';
-
 export default function Home() {
   return (
     <div className={styles.grid}>
@@ -22,10 +21,15 @@ export default function Home() {
         />
       
         </h1>
-
+        <div className={styles.rowContainer} >
         <text className={styles.centered1}> 
-        Computer Science Student @ University of Washington
+        Computer Science Student 
         </text>
+        <img className={styles.img1} src={'./uwlogo2.png'}/>
+        <text className={styles.centered1}>
+        University of Washington
+        </text>
+        </div>
         <text className={styles.centered}> 
         Researcher and analyst with a passion for applying data science and technology to solve real world problems across healthcare and business domains. 
         </text>
