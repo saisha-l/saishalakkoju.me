@@ -38,10 +38,15 @@ export default function Home() {
 
         <h1 className={styles.centered2}>Experience</h1>
         <div className={styles.col1}>
-          <Popup trigger={<div className={styles.card}>
-            <h3>Market & Data Analyst, Business Impact Group &rarr;</h3>
-            <p>Accelerating growth for SMBs in the Seattle area through delivering data-driven insights. Strengthening stakeholder relationships, by presenting research in an accessible format using data visualization to present strategies to increase capital.</p>
-            </div>} modal>
+          <Popup 
+            trigger={<div className={styles.card}>
+              <h3>Market & Data Analyst, Business Impact Group &rarr;</h3>
+              <p>Accelerating growth for SMBs in the Seattle area through delivering data-driven insights. Strengthening stakeholder relationships, by presenting research in an accessible format using data visualization to present strategies to increase capital.</p>
+            </div>} 
+            modal
+            overlayStyle={{ background: 'rgba(0, 0, 0, 0.5)' }} // Overlay styling
+            contentStyle={{ borderRadius: '10px', padding: '20px', maxWidth: '500px' }} // Popup content styling
+          >
             {close => (
               <div className={styles.cardpopup}>
                 <img className={styles.img2} src={'./bigUWlogo.png'}/>
@@ -51,26 +56,36 @@ export default function Home() {
               </div>
             )}
           </Popup>
-
-          <Popup trigger={<div className={styles.card}>
-            <h3>Research Intern, Fred Hutchinson Cancer Center &rarr;</h3>
+          <Popup 
+            trigger={<div className={styles.card}>
+              <h3>Research Intern, Fred Hutchinson Cancer Center &rarr;</h3>
             <p>Currently working under the director of the Human Biology department, Dr. Eric Holland. Utilizing R and ML to analyze RNA-Seq data to understand molecular basis for different types of cancers.</p>
-            </div>} modal>
+            </div>} 
+            modal
+            overlayStyle={{ background: 'rgba(0, 0, 0, 0.5)' }} // Overlay styling
+            contentStyle={{ borderRadius: '10px', padding: '20px', maxWidth: '500px' }} // Popup content styling
+          >
             {close => (
               <div className={styles.cardpopup}>
+                <img className={styles.img2} src={'./fredhutch.png'}/>
                 <h3>Research Intern, Fred Hutchinson Cancer Center</h3>
                 <p>Currently working under the director of the Human Biology department, Dr. Eric Holland. Utilizing R and ML to analyze RNA-Seq data to understand molecular basis for different types of cancers.</p>
                 <button onClick={close} className={styles.closeButton}>Close</button>
               </div>
             )}
           </Popup>
-
-          <Popup trigger={<div className={styles.card}>
-            <h3>Research Intern, University of Washington Medicine &rarr;</h3>
+          <Popup 
+            trigger={<div className={styles.card}>
+             <h3>Research Intern, University of Washington Medicine &rarr;</h3>
             <p>Analyzing paralysis and lifespan assays on C. Elegans nematode worm for pre-clinical screening of therapeutic agents for age-related diseases such as Parkinsons and Alzheimers.</p>
-            </div>} modal>
+                </div>} 
+            modal
+            overlayStyle={{ background: 'rgba(0, 0, 0, 0.5)' }} // Overlay styling
+            contentStyle={{ borderRadius: '10px', padding: '20px', maxWidth: '500px' }} // Popup content styling
+          >
             {close => (
               <div className={styles.cardpopup}>
+                <img className={styles.img2} src={'./loginLogo.png'}/>
                 <h3>Research Intern, University of Washington Medicine</h3>
                 <p>Analyzing paralysis and lifespan assays on C. Elegans nematode worm for pre-clinical screening of therapeutic agents for age-related diseases such as Parkinsons and Alzheimers.</p>
                 <button onClick={close} className={styles.closeButton}>Close</button>
@@ -78,9 +93,10 @@ export default function Home() {
             )}
           </Popup>
 
-        </div>
 
-       
+
+
+        </div>
       </main>
 
       <footer>
@@ -95,46 +111,14 @@ export default function Home() {
       </footer>
 
       <style jsx>{`
-        main {
-          padding: 5rem 0;
-          flex: 1;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-        }
-        footer {
-          width: 100%;
-          height: 100px;
-          border-top: 1px solid #eaeaea;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
-        footer img {
-          margin-left: 0.5rem;
-        }
-        footer a {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          text-decoration: none;
-          color: inherit;
-        }
-        code {
-          background: #fafafa;
-          border-radius: 5px;
-          padding: 0.75rem;
-          font-size: 1.1rem;
-          font-family:
-            Menlo,
-            Monaco,
-            Lucida Console,
-            Liberation Mono,
-            DejaVu Sans Mono,
-            Bitstream Vera Sans Mono,
-            Courier New,
-            monospace;
+        .closeButton {
+          background: #f50057;
+          color: white;
+          border: none;
+          padding: 8px 12px;
+          cursor: pointer;
+          border-radius: 4px;
+          margin-top: 10px;
         }
       `}</style>
 
@@ -143,18 +127,7 @@ export default function Home() {
         body {
           padding: 0;
           margin: 0;
-          font-family:
-            -apple-system,
-            BlinkMacSystemFont,
-            Segoe UI,
-            Roboto,
-            Oxygen,
-            Ubuntu,
-            Cantarell,
-            Fira Sans,
-            Droid Sans,
-            Helvetica Neue,
-            sans-serif;
+          font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
         }
         * {
           box-sizing: border-box;
