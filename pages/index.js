@@ -120,7 +120,7 @@ export default function Home() {
 
         </div>
         <div id="about" className={styles.rowContainer}>
-          <img className={styles.img3} src={'./headshot.jpg'} />
+          <img className={styles.img3} src={'./headshot.png'} />
           <div className={styles.col2}>
               <h1> 
                 Hi, I'm Saisha
