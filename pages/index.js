@@ -3,20 +3,37 @@ import styles from '../styles/Home.module.css';
 import React from 'react';
 import { TypeAnimation } from 'react-type-animation';
 import Popup from 'reactjs-popup';
-import { useEffect, useState } from 'react';
 
 export default function Home() {
   return (
     <div className={styles.grid}>
       <Head>
-        
         <link rel="icon" href="/sl.ico" />
-      
-
-
       </Head>
 
-      <main>
+      {/* Navigation Bar */}
+      <nav className={styles.nav}>
+        <button 
+          className={styles.navButton} 
+          onClick={() => document.getElementById('experience').scrollIntoView({ behavior: 'smooth' })}
+        >
+          Experience
+        </button>
+        <button 
+          className={styles.navButton} 
+          onClick={() => document.getElementById('experience').scrollIntoView({ behavior: 'smooth' })}
+        >
+          Projects
+        </button>
+        <button 
+          className={styles.navButton} 
+          onClick={() => document.getElementById('about').scrollIntoView({ behavior: 'smooth' })}
+        >
+          About Me
+        </button>
+      </nav>
+
+      <main className={styles.body}>
         <h1 className={styles.title}>
           <TypeAnimation
             sequence={['Saisha Lakkoju.']}
@@ -32,7 +49,7 @@ export default function Home() {
           <text className={styles.centered1}> 
             Computer Science Student @ 
           </text>
-          <img className={styles.img1} src={'./uwlogo2.png'}/>
+          <img className={styles.img1} src={'./uwlogo2.png'} />
           <text className={styles.centered1}>
             University of Washington
           </text>
@@ -42,7 +59,9 @@ export default function Home() {
           Researcher and analyst with a passion for applying data science and technology to solve real world problems across healthcare and business domains. 
         </text>
 
-        <h1 className={styles.centered2}>Experience</h1>
+        {/* Experience Section */}
+       <div>
+        <h1 id="experience" className={styles.centered2}>Experience</h1>
         <div className={styles.col1}>
           <Popup 
             trigger={<div className={styles.card}>
@@ -99,10 +118,19 @@ export default function Home() {
             )}
           </Popup>
 
-
-
-
         </div>
+        <div id="about" className={styles.rowContainer}>
+          <img className={styles.img3} src={'./headshot.jpg'} />
+          <div className={styles.col2}>
+              <h1> 
+                Hi, I'm Saisha
+              </h1>
+
+          </div>
+        </div>
+        </div>
+        
+        
       </main>
 
       <footer>
