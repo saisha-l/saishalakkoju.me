@@ -122,10 +122,14 @@ export default function Home() {
         <div id="about" className={styles.rowContainer}>
           <img className={styles.img3} src={'./headshot1.png'} />
           <div className={styles.col2}>
-              <h1> 
-                Hi, I'm Saisha
-              </h1>
-
+          <h1> Hi I'm Saisha 👋 </h1>
+            <h2> University of Washington </h2>
+            <p> BS in Computer Science </p>
+            
+            <p>  <strong>Organizations:  </strong> Algorthmic Trading Club, Business Interest Group, Women in Computing </p>
+            <h2> Bothell High School </h2>
+            <p> Graduated Summa Cum Laude </p>
+            <p> </p>
           </div>
         </div>
         </div>
