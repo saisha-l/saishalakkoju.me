@@ -101,7 +101,7 @@ export default function Home() {
           </Popup>
           <Popup 
             trigger={<div className={styles.card}>
-             <h3>Research Intern, University of Washington Medicine &rarr;</h3>
+             <h3>Research Volunteer, University of Washington Medicine &rarr;</h3>
             <p>Analyzing paralysis and lifespan assays on C. Elegans nematode worm for pre-clinical screening of therapeutic agents for age-related diseases such as Parkinsons and Alzheimers.</p>
                 </div>} 
             modal
@@ -111,7 +111,7 @@ export default function Home() {
             {close => (
               <div className={styles.cardpopup}>
                 <img className={styles.img2} src={'./loginLogo.png'}/>
-                <h3>Research Intern, University of Washington Medicine</h3>
+                <h3>Research Volunteer, University of Washington Medicine</h3>
                 <p>Analyzing paralysis and lifespan assays on C. Elegans nematode worm for pre-clinical screening of therapeutic agents for age-related diseases such as Parkinsons and Alzheimers.</p>
                 <button onClick={close} className={styles.closeButton}>Close</button>
               </div>
