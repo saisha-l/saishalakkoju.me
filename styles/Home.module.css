@@ -3,7 +3,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 1vw 2vw;
+  padding: 0.25vh 0.4vh;
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -14,9 +14,9 @@
   color: white;
   border: 0.2vw solid white;   
   border-radius: 3vw;
-  padding: 1vw 2vw;
+  padding: 1vw 1vw;
   cursor: pointer;
-  font-size: 2vw;
+  font-size: 2v;
   font-weight: bold;
   margin: 1vw;
 }
@@ -25,9 +25,9 @@
   background-color: white;
   border-radius: 3vw;
   color: black;
-  padding: 1vw 2vw;
+  padding: 1vw 1vw;
   cursor: pointer;
-  font-size: 2vw;
+  font-size: 2vh;
   font-weight: bold;
 }
 
@@ -62,7 +62,7 @@
   font-optical-sizing: auto;
   font-weight: 600;
   font-style: italic;
-  font-size: 3vw;
+  font-size: 3vh;
 }
 .rowContainer {
   display: flex;
@@ -90,7 +90,7 @@
 .title {
   margin: 0 0 1vw;
   line-height: 1.15;
-  font-size: 5vw;
+  font-size: 5vh;
 }
 
 .title {
@@ -104,7 +104,7 @@
 
 .description {
   line-height: 1.5;
-  font-size: 3vw;
+  font-size: 3vh;
 }
 
 .grid {
@@ -113,7 +113,7 @@
   justify-content: center;
   flex-wrap: wrap;
 
-  margin-top: 3vw;
+  margin-top: 3vh;
 }
 
 .centered{
@@ -124,7 +124,7 @@
   max-width: 80vw;
   margin-top: 1vw;
   text-align: center;
-  font-size: 2vw;
+  font-size: 2vh;
   font-weight: 300;
   margin-bottom: 1vw;
 
@@ -138,7 +138,7 @@
   max-width: 80vw;
   margin-top: 1vw;
   text-align: center;
-  font-size: 2vw;
+  font-size: 1vh;
   font-weight: 600;
   margin-bottom: 1vw;
 }
@@ -151,7 +151,7 @@
   max-width: 80vw;
   margin-top: 1vw;
   text-align: center;
-  font-size: 3cap;
+  font-size: 2cap;
   margin-bottom: 1vw;
 }
 
@@ -190,16 +190,16 @@
 }
 
 .col2 h1 {
-  font-size: 2.5vw;
+  font-size: 2.5vh;
 }
 
 .col2 h2 {
-  font-size: 2.0vw;
+  font-size: 2.0vh;
 }
 
 
 .col2 p {
-  font-size: 1.5vw;
+  font-size: 1.5vh;
 }
 .card {
   margin: 1vw;
@@ -316,9 +316,74 @@
   right: 0;
   opacity: 0;
   transition: opacity 0.3s;
+  white-space: nowrap; /* Prevent text wrapping by default */
 }
 
 .imageContainer:hover .hoverText {
   visibility: visible;
   opacity: 1;
+}
+
+/* Media query for smaller viewport heights */
+@media (max-height: 600px) {
+  .hoverText {
+    white-space: normal; /* Allow text wrapping */
+    padding: 1vw; /* Adjust padding for better readability */
+    font-size: 3vw; /* Adjust font size for smaller screens */
+  }
+}
+/* Base styles for other text elements */
+.card h3 {
+  margin: 0 0 1vw 0;
+  font-size: 2.0vw;
+}
+
+.card p {
+  margin: 0;
+  font-size: 1.5vw;
+  line-height: 1.5;
+}
+
+/* Media query for smaller viewport heights */
+@media (max-height: 600px) {
+  .card h3 {
+    font-size: 4vw; /* Adjust font size for smaller screens */
+  }
+
+  .card p {
+    font-size: 3vw; /* Adjust font size for smaller screens */
+  }
+}
+
+
+
+/* Ensure text wraps properly */
+.navButton,
+.body,
+.container,
+.container2,
+.name,
+.rowContainer,
+.title,
+.description,
+.grid,
+.centered,
+.centered1,
+.centered2,
+.img1,
+.img2,
+.img3,
+.col1,
+.col2,
+.card,
+.parentContainer,
+.cardpopup,
+.cardpopup2,
+.logo,
+.gridContainer,
+.imageContainer,
+.hoverText {
+  word-wrap: break-word; /* Allows long words to be broken and wrap to the next line */
+  overflow-wrap: break-word; /* Ensures compatibility with different browsers */
+  white-space: normal; /* Allows text to wrap normally */
 }

@@ -63,24 +63,28 @@ export default function Home() {
        <div id="experience" className={styles.container2}>
         <h1 id="experience" className={styles.centered2}>Experience</h1>
         <div className={styles.col1}>
-          <Popup 
-            trigger={<div className={styles.card}>
-              <h3>Market & Data Analyst, Business Impact Group &rarr;</h3>
-              <p>Accelerating growth for SMBs in the Seattle area through delivering data-driven insights. Strengthening stakeholder relationships, by presenting research in an accessible format using data visualization to present strategies to increase capital.</p>
-            </div>} 
-            modal
-            overlayStyle={{ background: 'rgba(0, 0, 0, 0.5)' }} // Overlay styling
-            contentStyle={{ borderRadius: '10px', padding: '20px', maxWidth: '500px' }} // Popup content styling
-          >
-            {close => (
-              <div className={styles.cardpopup}>
-                <img className={styles.img2} src={'./bigUWlogo.png'}/>
-                <h3>Market & Data Analyst, Business Impact Group</h3>
-                <p>Accelerating growth for SMBs in the Seattle area through delivering data-driven insights. Strengthening stakeholder relationships, by presenting research in an accessible format using data visualization to present strategies to increase capital.</p>
-                <button onClick={close} className={styles.closeButton}>Close</button>
-              </div>
-            )}
-          </Popup>
+        
+        <Popup 
+        trigger={<div className={styles.card}>
+          <h3>Market & Data Analyst, Business Impact Group &rarr;</h3>
+          <p>Accelerating growth for SMBs in the Seattle area through delivering data-driven insights. Strengthening stakeholder relationships, by presenting research in an accessible format using data visualization to present strategies to increase capital.</p>
+          </div>} 
+        modal
+        overlayStyle={{ background: 'rgba(0, 0, 0, 0.5)' }} // Overlay styling
+        contentStyle={{ borderRadius: '10px', padding: '20px', maxWidth: '500px' }} // Popup content styling
+      >
+
+        {close => (
+          <div className={styles.cardpopup}>
+            <img className={styles.img2} src={'./bigUWlogo.png'}/>
+            <h3>Market & Data Analyst, Business Impact Group</h3>
+            <p>Accelerating growth for SMBs in the Seattle area through delivering data-driven insights. Strengthening stakeholder relationships, by presenting research in an accessible format using data visualization to present strategies to increase capital.</p>
+            <button onClick={close} className={styles.closeButton}>Close</button>
+          </div>
+
+        )}
+      </Popup>
+
           <Popup 
             trigger={<div className={styles.card}>
               <h3>Research Intern, Fred Hutchinson Cancer Center &rarr;</h3>
@@ -99,32 +103,57 @@ export default function Home() {
               </div>
             )}
           </Popup>
+
           <Popup 
             trigger={<div className={styles.card}>
-             <h3>Research Volunteer, University of Washington Medicine &rarr;</h3>
-            <p>Analyzing paralysis and lifespan assays on C. Elegans nematode worm for pre-clinical screening of therapeutic agents for age-related diseases such as Parkinsons and Alzheimers.</p>
-                </div>} 
+              <h3>Research Volunteer, University of Washington Medicine &rarr;</h3>
+              <p>
+              Analyzing paralysis and lifespan assays on C. Elegans nematode worm for pre-clinical screening of therapeutic agents for age-related diseases such as Parkinsons and Alzheimers.
+              </p>
+            </div>} 
             modal
             overlayStyle={{ background: 'rgba(0, 0, 0, 0.5)' }} // Overlay styling
-            contentStyle={{ borderRadius: '10px', padding: '20px', maxWidth: '500px' }} // Popup content styling
+            contentStyle={{ borderRadius: '10px', padding: '20px' }} // Popup content styling
           >
             {close => (
-              <div className={styles.cardpopup}>
-                <img className={styles.img2} src={'./loginLogo.png'}/>
-                <h3>Research Volunteer, University of Washington Medicine</h3>
-                <p>Analyzing paralysis and lifespan assays on C. Elegans nematode worm for pre-clinical screening of therapeutic agents for age-related diseases such as Parkinsons and Alzheimers.</p>
-                <button onClick={close} className={styles.closeButton}>Close</button>
+              <div className={styles.parentContainer}>
+              <div className={styles.cardpopup2}>
+                <div className={styles.gridContainer}>
+                  
+                  <div className={styles.content}>
+                  <div className={styles.imageContainer}>
+                    <img className={styles.img2} src={'./uw1.jpg'} alt="Curie 1" />
+                    <span className={styles.hoverText}>Bioreactor Set Up</span>
+                  </div>
+                  <div className={styles.imageContainer}>
+                    <img className={styles.img2} src={'./uw2.jpg'} alt="Curie 2" />
+                    <span className={styles.hoverText}>Adjusting hardware</span>
+                  </div>
+                  <div className={styles.imageContainer}>
+                    <img className={styles.img2} src={'./uw3.jpeg'} alt="Curie 3" />
+                    <span className={styles.hoverText}>Designing the microcontroller</span>
+                  </div>
+                  </div>
+                  <div className={styles.content}>
+                  <img className={styles.img1} src={'./loginLogo.png'}/>
+                  <h3>Research Volunteer, University of Washington Medicine &rarr;</h3>
+                  <p>
+                  Analyzing paralysis and lifespan assays on C. Elegans nematode worm for pre-clinical screening of therapeutic agents for age-related diseases such as Parkinsons and Alzheimers.
+                  </p>
+                  <button onClick={close} className={styles.closeButton}>Close</button>
+                  </div>
+                </div>
+              </div>
               </div>
             )}
           </Popup>
-
         </div>
 
         <h1 id="projects" className={styles.centered2}>Project</h1>
         <div className={styles.col1}>
           <Popup 
             trigger={<div className={styles.card}>
-              <h3>Heart to Heart Project &rarr;</h3>
+              <h3>Heart to Heart Project&rarr;</h3>
               <p>
               Constructed a working bioreactor to sustain a ex vivo embryonic chicken heart. Worked under Dr. Newton de Faria using data acquisition to build and program an effective microcontroller to simulate natural cardiological conditions of (temperature, pressures, fluid exchange, and shear stresses).
               </p>
@@ -157,8 +186,7 @@ export default function Home() {
                   
                   <div className={styles.content}>
                   <img className={styles.img1} src={'./cornelllogo.png'}/>
-
-                    <h3>Engineer - Bioreactor Data Acquisition and Control System Team</h3>
+                    <h3> Engineer - Bioreactor Data Acquisition and Control System Team</h3>
                     <p>Constructed a working bioreactor to sustain a ex vivo embryonic chicken heart. Worked under Dr. Newton de Faria using data acquisition to build and program an effective microcontroller to simulate natural cardiological conditions of (temperature, pressures, fluid exchange, and shear stresses).</p>
                     <button onClick={close} className={styles.closeButton}>Close</button>
                   </div>
@@ -167,9 +195,7 @@ export default function Home() {
               </div>
             )}
           </Popup>
-
         </div>
-
         
         <div id="about" className={styles.rowContainer}>
           <img className={styles.img3} src={'./headshot1.png'} />
@@ -219,6 +245,9 @@ export default function Home() {
           flex-direction: column;
           justify-content: center;
           align-items: center;
+          word-wrap: break-word; /* Allows long words to be broken and wrap to the next line */
+          overflow-wrap: break-word; /* Ensures compatibility with different browsers */
+        white-space: normal; /* Allows text to wrap normally */
         }
         footer {
           width: 100%;
@@ -261,7 +290,10 @@ export default function Home() {
           padding: 0;
           margin: 0;
           font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-        }
+        word-wrap: break-word; /* Allows long words to be broken and wrap to the next line */
+        overflow-wrap: break-word; /* Ensures compatibility with different browsers */
+       white-space: normal; /* Allows text to wrap normally */
+          }
         * {
           box-sizing: border-box;
         }
