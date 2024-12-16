@@ -21,7 +21,7 @@ export default function Home() {
         </button>
         <button 
           className={styles.navButton} 
-          onClick={() => document.getElementById('experience').scrollIntoView({ behavior: 'smooth' })}
+          onClick={() => document.getElementById('projects').scrollIntoView({ behavior: 'smooth' })}
         >
           Projects
         </button>
@@ -60,7 +60,7 @@ export default function Home() {
         </text>
 
         {/* Experience Section */}
-       <div>
+       <div id="experience" className={styles.container2}>
         <h1 id="experience" className={styles.centered2}>Experience</h1>
         <div className={styles.col1}>
           <Popup 
@@ -119,6 +119,58 @@ export default function Home() {
           </Popup>
 
         </div>
+
+        <h1 id="projects" className={styles.centered2}>Project</h1>
+        <div className={styles.col1}>
+          <Popup 
+            trigger={<div className={styles.card}>
+              <h3>Heart to Heart Project &rarr;</h3>
+              <p>
+              Constructed a working bioreactor to sustain a ex vivo embryonic chicken heart. Worked under Dr. Newton de Faria using data acquisition to build and program an effective microcontroller to simulate natural cardiological conditions of (temperature, pressures, fluid exchange, and shear stresses).
+              </p>
+            </div>} 
+            modal
+            overlayStyle={{ background: 'rgba(0, 0, 0, 0.5)' }} // Overlay styling
+            contentStyle={{ borderRadius: '10px', padding: '20px' }} // Popup content styling
+          >
+            {close => (
+              <div className={styles.parentContainer}>
+              <div className={styles.cardpopup2}>
+                <div className={styles.gridContainer}>
+                  
+                  <div className={styles.content}>
+                  <div className={styles.imageContainer}>
+                  <img className={styles.img2} src={'./curie1.jpg'} alt="Curie 1"/>
+                  <span className={styles.hoverText}>Bioreactor Set Up </span>
+                  </div>
+                  <div className={styles.imageContainer}>
+                  <img className={styles.img2} src={'./curie2.jpeg'} alt="Curie 2"/>
+                  <span className={styles.hoverText}>Adjusting hardware</span>
+                  </div>
+                  <div className={styles.imageContainer}>
+                  <img className={styles.img2} src={'./curie3.jpeg'} alt="Curie 3"/>
+                  <span className={styles.hoverText}>Designing the microcontroller</span>
+                  </div>
+                  
+
+                  </div>
+                  
+                  <div className={styles.content}>
+                  <img className={styles.img1} src={'./cornelllogo.png'}/>
+
+                    <h3>Engineer - Bioreactor Data Acquisition and Control System Team</h3>
+                    <p>Constructed a working bioreactor to sustain a ex vivo embryonic chicken heart. Worked under Dr. Newton de Faria using data acquisition to build and program an effective microcontroller to simulate natural cardiological conditions of (temperature, pressures, fluid exchange, and shear stresses).</p>
+                    <button onClick={close} className={styles.closeButton}>Close</button>
+                  </div>
+                </div>
+              </div>
+              </div>
+            )}
+          </Popup>
+
+        </div>
+
+        
         <div id="about" className={styles.rowContainer}>
           <img className={styles.img3} src={'./headshot1.png'} />
           <div className={styles.col2}>
@@ -132,6 +184,8 @@ export default function Home() {
             <p> </p>
           </div>
         </div>
+        
+       
         </div>
         
         
