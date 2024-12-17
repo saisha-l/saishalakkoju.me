@@ -138,7 +138,7 @@
   max-width: 80vw;
   margin-top: 1vw;
   text-align: center;
-  font-size: 1vh;
+  font-size: 2vh;
   font-weight: 600;
   margin-bottom: 1vw;
 }
@@ -151,12 +151,12 @@
   max-width: 80vw;
   margin-top: 1vw;
   text-align: center;
-  font-size: 2cap;
+  font-size: 4vh;
   margin-bottom: 1vw;
 }
 
 .img1{
-  max-height: 3vw;
+  height: 3vw;
 }
 
 .img2{
@@ -165,7 +165,7 @@
 }
 
 .img3{
-  min-height: auto;
+  height: 40vh;
   max-height: 30vw;
 }
 
@@ -190,21 +190,20 @@
 }
 
 .col2 h1 {
-  font-size: 2.5vh;
+  font-size: 3vh;
 }
 
 .col2 h2 {
-  font-size: 2.0vh;
+  font-size: 3vh;
 }
 
 
 .col2 p {
-  font-size: 1.5vh;
+  font-size: 2.5vh;
 }
 .card {
-  margin: 1vw;
-  flex-basis: 45%;
-  padding: 1.5vw;
+  margin: 0.5vh;
+  padding: 1.0vh;
   text-align: left;
   color: rgb(131, 131, 131);
   text-decoration: none;
@@ -214,7 +213,6 @@
     border-color 0.15s ease;
 }
 
-
 .parentContainer {
   display: flex;
   justify-content: center;
@@ -222,10 +220,8 @@
 }
 
 .cardpopup {
-  flex-grow: 1;
   width: 100%;
   max-width: 100vh; /* Ensures it doesn't exceed the viewport height */
-  flex-basis: 45%;
   padding: 3vw;
   text-align: left;
   background-color: white;
@@ -239,10 +235,8 @@
 }
 
 .cardpopup2 {
-  flex-grow: 1;
   width: 100%;
   max-width: 100vh; /* Ensures it doesn't exceed the viewport height */
-  flex-basis: 45%;
   padding: 3vw;
   text-align: left;
   background-color: white;
@@ -253,7 +247,6 @@
   transition:
     color 0.15s ease,
     border-color 0.15s ease;
-  
 }
 
 
@@ -267,12 +260,12 @@
 
 .card h3 {
   margin: 0 0 1vw 0;
-  font-size: 2.0vw;
+  font-size: 2.5vh !important;
 }
 
 .card p {
   margin: 0;
-  font-size: 1.5vw;
+  font-size: 2.0vh !important;
   line-height: 1.5;
 }
 
