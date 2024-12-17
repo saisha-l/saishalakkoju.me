@@ -120,19 +120,19 @@ export default function Home() {
               <div className={styles.cardpopup2}>
                 <div className={styles.gridContainer}>
                   
-                  <div className={styles.content}>
-                  <div className={styles.imageContainer}>
-                    <img className={styles.img2} src={'./uw1.jpg'} alt="Curie 1" />
-                    <span className={styles.hoverText}>Bioreactor Set Up</span>
-                  </div>
-                  <div className={styles.imageContainer}>
-                    <img className={styles.img2} src={'./uw2.jpg'} alt="Curie 2" />
-                    <span className={styles.hoverText}>Adjusting hardware</span>
-                  </div>
-                  <div className={styles.imageContainer}>
-                    <img className={styles.img2} src={'./uw3.jpeg'} alt="Curie 3" />
-                    <span className={styles.hoverText}>Designing the microcontroller</span>
-                  </div>
+                  <div className={styles.content} style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center' }}>
+                    <div className={styles.imageContainer}>
+                      <img className={styles.img2} src={'./uw1.jpg'} alt="Curie 1" />
+                      <span className={styles.hoverText}>Kaeberlin Lab</span>
+                    </div>
+                    <div className={styles.imageContainer}>
+                      <img className={styles.img2} src={'./uw2.jpg'} alt="Curie 2" />
+                      
+                    </div>
+                    <div className={styles.imageContainer}>
+                      <img className={styles.img2} src={'./uw3.jpeg'} alt="Curie 3" />
+                      <span className={styles.hoverText}> Our volunteering team</span>
+                    </div>
                   </div>
                   <div className={styles.content}>
                   <img className={styles.img1} src={'./loginLogo.png'}/>

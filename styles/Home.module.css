@@ -1,34 +1,55 @@
 .nav {
-  background-color: black;
+  background-color: transparent;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0.25vh 0.4vh;
-  position: sticky;
-  top: 0;
+  padding: 1vh 2vh; /* Adjust padding for a rectangular shape */
+  position: fixed; /* Position the nav bar fixed within the viewport */
+  top: 0; /* Position at the top */
+  left: 0; /* Position at the left */
+  width: 100vw; /* Full width */
+  height: 10vh; /* Adjust the height as needed */
   z-index: 1000;
+  transition: all 0.3s ease; /* Smooth transition for all properties */
+}
+
+.nav.scrolled {
+  background-color: black;
+  top: 5vh; /* Adjust the top position as needed */
+  left: 10vw; /* Adjust the left position as needed */
+  width: 80vw; /* Adjust the width as needed */
+  height: 5vh; /* Adjust the height as needed */
+  border-radius: 1vw; /* Add border-radius for rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow for a floating effect */
 }
 
 .navButton {
   background-color: transparent;
-  color: white;
-  border: 0.2vw solid white;   
-  border-radius: 3vw;
-  padding: 1vw 1vw;
+  color: black;
+  border: 0.2vw solid transparent; /* Set initial border to transparent */
   cursor: pointer;
-  font-size: 2v;
-  font-weight: bold;
+  font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    Segoe UI,
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    Fira Sans,
+    Droid Sans,
+    Helvetica Neue,
+    sans-serif;
+  font-size: 2vh;
   margin: 1vw;
+  transition: border-color 0.3s, background-color 0.3s; /* Smooth transition for border and background color */
 }
 
 .navButton:hover {
-  background-color: white;
-  border-radius: 3vw;
-  color: black;
-  padding: 1vw 1vw;
-  cursor: pointer;
-  font-size: 2vh;
-  font-weight: bold;
+  color: white;
+  background-color: rgba(255, 255, 255, 0.1); /* Add a slight background color on hover */
+  border-color: white; /* Change border color on hover */
 }
 
 .body {
@@ -160,8 +181,9 @@
 }
 
 .img2{
-  max-height: 10vw; 
-  margin-left: 0.5vw; 
+  width: 100%; /* Make the image take up the full width of its container */
+  height: 100%; /* Make the image take up the full height of its container */
+  object-fit: cover; /* Crop the image to cover the container */
 }
 
 .img3{
@@ -282,18 +304,27 @@
 
 .gridContainer {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjust the minmax values as needed */
   gap: 2vw;
 }
 
-
 .imageContainer {
+  width: 20vw; /* Ensure the image container takes up the full width of the grid cell */
+  height: 20vh; /* Set a fixed height for the image container */
+  overflow: hidden; /* Hide any overflow */
   position: relative;
-  display: inline-block;
 }
 
+
+.imglogo {
+  width: 20vh; /* Make the image take up the full width of its container */
+  height: 20vh; /* Make the image take up the full height of its container */
+  object-fit: cover; /* Crop the image to cover the container */
+}
 .img2 {
-  display: block;
+  width: 100%; /* Make the image take up the full width of its container */
+  height: 100%; /* Make the image take up the full height of its container */
+  object-fit: cover; /* Crop the image to cover the container */
 }
 
 .hoverText {
@@ -348,7 +379,17 @@
   }
 }
 
+@media (max-width: 768px) {
+  .imageContainer {
+    flex: 1 1 45%; /* Adjust the base size for smaller screens */
+  }
+}
 
+@media (max-width: 576px) {
+  .imageContainer {
+    flex: 1 1 100%; /* Stack the images vertically on very small screens */
+  }
+}
 
 /* Ensure text wraps properly */
 .navButton,
