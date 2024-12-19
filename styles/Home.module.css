@@ -3,30 +3,38 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 1vh 2vh; /* Adjust padding for a rectangular shape */
-  position: fixed; /* Position the nav bar fixed within the viewport */
-  top: 0; /* Position at the top */
-  left: 0; /* Position at the left */
-  width: 100vw; /* Full width */
-  height: 10vh; /* Adjust the height as needed */
+  padding: 1vh 2vh; 
+  position: fixed; 
+  top: 0; 
+  left: 0; 
+  width: 100vw;
+  height: 10vh;
   z-index: 1000;
-  transition: all 0.3s ease; /* Smooth transition for all properties */
+  transition: all 0.5s ease-in-out; /* Smooth transition for all properties */
+  
 }
 
 .nav.scrolled {
-  background-color: black;
-  top: 5vh; /* Adjust the top position as needed */
-  left: 10vw; /* Adjust the left position as needed */
-  width: 80vw; /* Adjust the width as needed */
-  height: 5vh; /* Adjust the height as needed */
-  border-radius: 1vw; /* Add border-radius for rounded corners */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow for a floating effect */
+  background-color: white;
+  top: 5vh; 
+  left: 10vw; 
+  width: 80vw;
+  height: 5vh;
+  border-radius: 1vw; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  transition: all 0.5s ease-in-out; /* Smooth transition for all properties */
+  
+}
+
+.navButton.active {
+  font-weight: 600;
+  color: darkslateblue; 
 }
 
 .navButton {
-  background-color: transparent;
+  background-color: rgba(255, 255, 255, 0.862);
   color: black;
-  border: 0.2vw solid transparent; /* Set initial border to transparent */
+  border: 0.2vw solid transparent; 
   cursor: pointer;
   font-family:
     Inter,
@@ -43,13 +51,13 @@
     sans-serif;
   font-size: 2vh;
   margin: 1vw;
-  transition: border-color 0.3s, background-color 0.3s; /* Smooth transition for border and background color */
+  transition: border-color 0.3s, background-color 0.3s; 
 }
 
 .navButton:hover {
-  color: white;
-  background-color: rgba(255, 255, 255, 0.1); /* Add a slight background color on hover */
-  border-color: white; /* Change border color on hover */
+  color: darkslateblue;
+  background-color: rgba(255, 255, 255, 0.1); 
+  border-color: white; 
 }
 
 .body {

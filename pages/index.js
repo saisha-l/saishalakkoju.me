@@ -1,10 +1,41 @@
 import Head from 'next/head';
 import styles from '../styles/Home.module.css';
-import React from 'react';
+import React, { useEffect } from 'react';
 import { TypeAnimation } from 'react-type-animation';
 import Popup from 'reactjs-popup';
 
 export default function Home() {
+  useEffect(() => {
+    const nav = document.querySelector(`.${styles.nav}`);
+    const sections = document.querySelectorAll('section'); // Assuming your sections are <section> elements
+    const navButtons = document.querySelectorAll(`.${styles.navButton}`);
+
+    if (nav) {
+      const handleScroll = () => {
+        if (window.scrollY > 50) { // Adjust the scroll position as needed
+          nav.classList.add(styles.scrolled);
+        } else {
+          nav.classList.remove(styles.scrolled);
+        }
+
+        sections.forEach((section, index) => {
+          const rect = section.getBoundingClientRect();
+          if (rect.top <= 50 && rect.bottom >= 50) {
+            navButtons.forEach(button => button.classList.remove(styles.active));
+            navButtons[index].classList.add(styles.active);
+          }
+        });
+      };
+
+      window.addEventListener('scroll', handleScroll);
+
+      // Cleanup the event listener on component unmount
+      return () => {
+        window.removeEventListener('scroll', handleScroll);
+      };
+    }
+  }, []);
+
   return (
     <div className={styles.grid}>
       <Head>
@@ -119,7 +150,6 @@ export default function Home() {
               <div className={styles.parentContainer}>
               <div className={styles.cardpopup2}>
                 <div className={styles.gridContainer}>
-                  
                   <div className={styles.content} style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center' }}>
                     <div className={styles.imageContainer}>
                       <img className={styles.img2} src={'./uw1.jpg'} alt="Curie 1" />
