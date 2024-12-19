@@ -58,9 +58,9 @@ export default function Home() {
         </button>
         <button 
           className={styles.navButton} 
-          onClick={() => document.getElementById('about').scrollIntoView({ behavior: 'smooth' })}
+          onClick={() => document.getElementById('education').scrollIntoView({ behavior: 'smooth' })}
         >
-          About Me
+          Education
         </button>
       </nav>
 
@@ -179,7 +179,7 @@ export default function Home() {
           </Popup>
         </div>
 
-        <h1 id="projects" className={styles.centered2}>Project</h1>
+        <h1 id="projects" className={styles.centered2}>Projects</h1>
         <div className={styles.col1}>
           <Popup 
             trigger={<div className={styles.card}>
@@ -225,21 +225,94 @@ export default function Home() {
               </div>
             )}
           </Popup>
+
+
+          <Popup 
+            trigger={<div className={styles.card}>
+              <h3> Arise CO2 &rarr;</h3>
+              <p>
+              Worked with Python, SQL, and Google CoLab to analyse carbon emissions data in the transportation, industrial, agriculture and electrical sectors. Collected, cleaned and visualized data from the International Energy Agency. Built a cohesive UI using Canva Website Creator to display data.
+              </p>
+            </div>} 
+            modal
+            overlayStyle={{ background: 'rgba(0, 0, 0, 0.5)' }} // Overlay styling
+            contentStyle={{ borderRadius: '10px', padding: '20px' }} // Popup content styling
+          >
+            {close => (
+              <div className={styles.parentContainer}>
+              <div className={styles.cardpopup2}>
+                <div className={styles.gridContainer}>
+                  
+                  <div className={styles.content}>
+                  <div className={styles.imageContainer}>
+                  <img className={styles.img2} src={'./kwk1.jpg'} alt="Curie 1"/>
+                  <span className={styles.hoverText}>Bioreactor Set Up </span>
+                  </div>
+                  <div className={styles.imageContainer}>
+                  <img className={styles.img2} src={'./kwk2.jpg'} alt="Curie 2"/>
+                  <span className={styles.hoverText}>Adjusting hardware</span>
+                  </div>
+                  <div className={styles.imageContainer}>
+                  <img className={styles.img2} src={'./kwk3.jpg'} alt="Curie 3"/>
+                  <span className={styles.hoverText}>Designing the microcontroller</span>
+                  </div>
+                  
+
+                  </div>
+                  
+                  <div className={styles.content}>
+                  <div className={styles.imageStack}>
+  <img className={styles.img1} src={'./starbucks.png'} alt="Starbucks Logo"/>
+  <img className={styles.img1} src={'./logokwk.png'} alt="KWK Logo"/>
+</div>
+                    <p>
+                    Worked with Python, SQL, and Google CoLab to analyse carbon emissions data in the transportation, industrial, agriculture and electrical sectors. Collected, cleaned and visualized data from the International Energy Agency. Built a cohesive UI using Canva Website Creator to display data.
+                    </p>
+                                      
+                    <a href="https://ariseco2.my.canva.site/" target="_blank" rel="noopener noreferrer" className={styles.linkButton}>
+                      Visit Link
+                    </a>
+                    <button onClick={close} className={styles.closeButton}>Close</button>
+                  </div>
+                </div>
+              </div>
+              </div>
+            )}
+          </Popup>
         </div>
         
-        <div id="about" className={styles.rowContainer}>
-          <img className={styles.img3} src={'./headshot1.png'} />
-          <div className={styles.col2}>
-          <h1> Hi I'm Saisha 👋 </h1>
-            <h2> University of Washington </h2>
-            <p> BS in Computer Science </p>
-            
-            <p>  <strong>Organizations:  </strong> Algorthmic Trading Club, Business Interest Group, Women in Computing </p>
-            <h2> Bothell High School </h2>
-            <p> Graduated Summa Cum Laude </p>
-            <p> </p>
-          </div>
-        </div>
+
+<h1 id="education" className={styles.centered2}>Education</h1>
+        
+          <div className={styles.col1}>
+  <div className={styles.cardEducation}>
+    <div className={styles.gridContainer}>
+      <div className={styles.content}>
+        <img className={styles.img2} src={'./gradpic.jpeg'} alt="Graduation"/>
+      </div>
+      <div className={styles.content}>
+        <h2 style={{ color: '#0f0e33' }}>Bothell High School</h2>
+        <p style={{ marginBottom: '1.5vh' }}>
+          Graduated Summa Cum Laude from Bothell High School, as the Co-President of both Science Olympiad and National Honor Society. Was selected out of the 300+ class to be presented with departmental honors in Science and the Marines Academic Excellence award.
+        </p>
+        <p style={{ marginBottom: '0vh' }}>
+          Other recognitions earned throughout highschool include:
+        </p>
+        <p style={{ fontStyle: 'italic', marginTop: '-2vh' }}>
+          <br></br> &bull;  American Association of University Women (AAUW) STEM Recognition Award in Science 
+          <br></br> &bull;  Presidential Service Award (2x) 
+          <br></br> &bull;  Washington State Honors Award
+          <br></br> &bull;   Washington State Principals’ Scholars Award 
+          <br></br> &bull;   DECA Emerging Leader Award
+          <br></br> &bull;   Congressional Recognition 
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+        
+        
         
        
         </div>
