@@ -286,11 +286,39 @@ export default function Home() {
         
           <div className={styles.col1}>
   <div className={styles.cardEducation}>
+
+
+
+
     <div className={styles.gridContainer}>
-      <div className={styles.content}>
+
+    <div className={styles.content}>
         <img className={styles.img2} src={'./gradpic.jpeg'} alt="Graduation"/>
       </div>
+    <div className={styles.content}>
+        <h2 style={{ color: '#0f0e33' }}>University of Washington</h2>
+        <p style={{ marginBottom: '1.5vh' }}>
+          Studying Computer Science at the Paul G Allen School of Computer Science in UW Seattle. Minoring in Business Administration at the Foster School of Business.
+        </p>
+        <p style={{ marginBottom: '0vh' }}>
+          Clubs and Organizations:
+        </p>
+        <p style={{ fontStyle: 'italic', marginTop: '-2vh' }}>
+          <br></br> &bull;  Business Impact Group
+          <br></br> &bull;  Algorithmic Trading Club
+          <br></br> &bull;  Computing Community
+          <br></br> &bull;  Women in Computing
+        </p>
+      </div>
+      
+    <div className={styles.content}>
+        <img className={styles.img2} src={'./gradpic.jpeg'} alt="Graduation"/>
+      </div>
+
       <div className={styles.content}>
+
+
+        
         <h2 style={{ color: '#0f0e33' }}>Bothell High School</h2>
         <p style={{ marginBottom: '1.5vh' }}>
           Graduated Summa Cum Laude from Bothell High School, as the Co-President of both Science Olympiad and National Honor Society. Was selected out of the 300+ class to be presented with departmental honors in Science and the Marines Academic Excellence award.
@@ -307,7 +335,11 @@ export default function Home() {
           <br></br> &bull;   Congressional Recognition 
         </p>
       </div>
+      
     </div>
+
+
+
   </div>
 </div>
 
@@ -384,6 +416,12 @@ export default function Home() {
             Bitstream Vera Sans Mono,
             Courier New,
             monospace;
+        }
+        .gridContainer {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          margin: 0 10vw;
         }
       `}</style>
 

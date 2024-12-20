@@ -343,11 +343,6 @@
   }
 }
 
-.gridContainer {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjust the minmax values as needed */
-  gap: 2vw;
-}
 
 .imageContainer {
   width: 20vw; /* Ensure the image container takes up the full width of the grid cell */
@@ -493,3 +488,19 @@
   width: auto;
   margin-bottom: 1vh; /* Add some space between the images */
 }
+
+
+.gridContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjust the minmax values as needed */
+  gap: 2vw;
+}
+
+.content {
+  flex: 1 1 auto;
+  margin: 10px; /* Adjust as needed */
+  max-width: 80vh;
+}
+
+
+
