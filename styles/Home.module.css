@@ -273,28 +273,15 @@
 
 .cardEducation{
   width: 100%;
-  max-width: 100vh; /* Ensures it doesn't exceed the viewport height */
-  padding: 3vw;
+  padding: 1vw;
   text-align: left;
   background-color: white;
-  box-shadow: inset;
-  text-decoration: none;
-  border-radius: 1vw;
-  transition:
-    color 0.15s ease,
-    border-color 0.15s ease;
 }
 
-.cardEducation:hover,
-.cardEducation:focus,
-.cardEducation:active {
-  color:  black;
-
-}
 
 .cardEducation h2 {
   margin: 0 0 1vw 0;
-  font-size: 4.5vh !important;
+  font-size: 1.5vw !important;
   font-family: "Playfair Display", serif;
   font-style: italic;
   color:  black;
@@ -303,8 +290,8 @@
 
 .cardEducation p {
   margin: 0;
-  font-size: 2.0vh !important;
-  line-height: 1.5;
+  font-size: 1.0vw !important;
+  line-height: 1.4;
   color:  black;
   border-color: black;
 }
@@ -355,8 +342,9 @@
   object-fit: cover; /* Crop the image to cover the container */
 }
 .img2 {
+
   width: 100%; /* Make the image take up the full width of its container */
-  height: 100%; /* Make the image take up the full height of its container */
+  height: 90%; /* Make the image take up the full height of its container */
   object-fit: cover; /* Crop the image to cover the container */
 }
 
@@ -486,18 +474,50 @@
   margin-bottom: 1vh; /* Add some space between the images */
 }
 
-
 .gridContainer {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjust the minmax values as needed */
-  gap: 2vw;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px; /* Adjust the gap between items as needed */
 }
 
 .content {
-  flex: 1 1 auto;
+  flex: 1 1 200px; /* Flex-grow, flex-shrink, and flex-basis */
   margin: 10px; /* Adjust as needed */
   max-width: 80vh;
 }
 
+@media (max-width: 600px) {
+  .gridContainer {
+    flex-direction: column;
+  }
+}
+
+
+
+.skillHead {
+  cursor: pointer; /* Add a pointer cursor to indicate it's clickable */
+  display: inline-block;
+  width: 1000px; /* Set a fixed width */
+  font-size: 1.6vw;
+  text-align: left; /* Ensure text is aligned to the left */
+   /* Use a monospace font for consistent character width */
+}
+
+.disabledButton {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  background-color: rgb(57, 20, 79);
+  border: none;
+  border-radius: 50px;
+  text-align: center;
+  opacity: 0.9;
+  margin-left: 3px;
+  margin-right: 3px;
+  margin-top: 5px;
+
+}
 
 

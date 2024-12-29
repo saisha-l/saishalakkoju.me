@@ -1,8 +1,90 @@
 import Head from 'next/head';
 import styles from '../styles/Home.module.css';
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { TypeAnimation } from 'react-type-animation';
 import Popup from 'reactjs-popup';
+
+const SkillsSection = () => {
+  const [showLanguages, setShowLanguages] = useState(false);
+  const [showFrontEnd, setShowFrontEnd] = useState(false);
+  const [showBackEnd, setShowBackEnd] = useState(false);
+  const [showConsulting, setShowConsulting] = useState(false);
+  const [showBioinformatics, setShowBioinformatics] = useState(false);
+
+  const toggleLanguages = () => setShowLanguages(!showLanguages);
+  const toggleFrontEnd = () => setShowFrontEnd(!showFrontEnd);
+  const toggleBackEnd = () => setShowBackEnd(!showBackEnd);
+  const toggleConsulting = () => setShowConsulting(!showConsulting);
+  const toggleBioinformatics = () => setShowBioinformatics(!showBioinformatics);
+
+  return (
+    <div>
+      <h2 id="skills" className={styles.skillHead} onClick={toggleLanguages}>
+        {showLanguages ? '▼ Languages' : '▶ Languages'}
+      </h2>
+      {showLanguages && (
+        <div className={styles.skillContainer}>
+          <p className={styles.disabledButton}>Java</p>
+          <p className={styles.disabledButton}>Python</p>
+          <p className={styles.disabledButton}>HTML/CSS/JavaScript</p>
+          <p className={styles.disabledButton}>R</p>
+        </div>
+      )}
+
+      <h2 id="skills" className={styles.skillHead} onClick={toggleFrontEnd}>
+        {showFrontEnd ? '▼ Front End' : '▶ Front End'}
+      </h2>
+      {showFrontEnd && (
+        <div className={styles.skillContainer}>
+          <p className={styles.disabledButton}>HTML</p>
+          <p className={styles.disabledButton}>CSS</p>
+          <p className={styles.disabledButton}>JavaScript</p>
+          <p className={styles.disabledButton}>Tailwind CSS</p>
+          <p className={styles.disabledButton}>React</p>
+          <p className={styles.disabledButton}>NextJS</p>
+          <p className={styles.disabledButton}>Version Control</p>
+        </div>
+      )}
+
+      <h2 id="skills" className={styles.skillHead} onClick={toggleBackEnd}>
+        {showBackEnd ? '▼ Back End' : '▶ Back End'}
+      </h2>
+      {showBackEnd && (
+        <div className={styles.skillContainer}>
+          {/* Add Back End skills here */}
+        </div>
+      )}
+
+      <h2 id="skills" className={styles.skillHead} onClick={toggleConsulting}>
+        {showConsulting ? '▼ Consulting/Marketing' : '▶ Consulting/Marketing'}
+      </h2>
+      {showConsulting && (
+        <div className={styles.skillContainer}>
+          <p className={styles.disabledButton}>Microsoft Office</p>
+          <p className={styles.disabledButton}>Microsoft Word</p>
+          <p className={styles.disabledButton}>Microsoft Excel</p>
+          <p className={styles.disabledButton}>Canva</p>
+        </div>
+      )}
+
+      <h2 id="skills" className={styles.skillHead} onClick={toggleBioinformatics}>
+        {showBioinformatics ? '▼ Bioinformatics' : '▶ Bioinformatics'}
+      </h2>
+      {showBioinformatics && (
+        <div className={styles.skillContainer}>
+          <p className={styles.disabledButton}>R</p>
+          <p className={styles.disabledButton}>Principal Component Analysis</p>
+          <p className={styles.disabledButton}>Chi Squared Analysis</p>
+          <p className={styles.disabledButton}>UMAP Visualisation</p>
+          <p className={styles.disabledButton}>RNA Sequencing</p>
+          <p className={styles.disabledButton}>TSNE</p>
+          <p className={styles.disabledButton}>CombatSeq</p>
+          <p className={styles.disabledButton}>Life Span Assays</p>
+        </div>
+      )}
+    </div>
+  );
+};
 
 export default function Home() {
   useEffect(() => {
@@ -284,21 +366,21 @@ export default function Home() {
 
 <h1 id="education" className={styles.centered2}>Education</h1>
         
-          <div className={styles.col1}>
+<div className={styles.col1}>
   <div className={styles.cardEducation}>
-
-
 
 
     <div className={styles.gridContainer}>
 
     <div className={styles.content}>
-        <img className={styles.img2} src={'./uwPicture.jpeg'} alt="UW Campus"/>
+        <img className={styles.img2} src={'./uwPicture.jpeg'} alt="UW "/>
       </div>
+
     <div className={styles.content}>
         <h2 style={{ color: '#0f0e33' }}>University of Washington</h2>
         <p style={{ marginBottom: '1.5vh' }}>
-          Studying Computer Science at the Paul G Allen School of Computer Science in UW Seattle. Minoring in Business Administration at the Foster School of Business.
+        <br></br> Majoring in Computer Science with a concentration of Data Science 
+        <br></br> Minoring in Business Administration
         </p>
         <p style={{ marginBottom: '0vh' }}>
           Clubs and Organizations:
@@ -315,10 +397,7 @@ export default function Home() {
         <img className={styles.img2} src={'./gradpic.jpeg'} alt="Graduation"/>
       </div>
 
-      <div className={styles.content}>
-
-
-        
+    <div className={styles.content}>
         <h2 style={{ color: '#0f0e33' }}>Bothell High School</h2>
         <p style={{ marginBottom: '1.5vh' }}>
           Graduated Summa Cum Laude from Bothell High School, as the Co-President of both Science Olympiad and National Honor Society. Was selected out of the 300+ class to be presented with departmental honors in Science and the Marines Academic Excellence award.
@@ -330,7 +409,6 @@ export default function Home() {
           <br></br> &bull;  American Association of University Women (AAUW) STEM Recognition Award in Science 
           <br></br> &bull;  Presidential Service Award (2x) 
           <br></br> &bull;  Washington State Honors Award
-          <br></br> &bull;   Washington State Principals’ Scholars Award 
           <br></br> &bull;   DECA Emerging Leader Award
           <br></br> &bull;   Congressional Recognition 
         </p>
@@ -343,10 +421,13 @@ export default function Home() {
   </div>
 </div>
 
-        
-        
-        
-       
+<h1 id="skills" className={styles.centered2}>Skills</h1>
+
+<div className={styles.col1}>
+
+<SkillsSection />
+
+</div>
         </div>
         
         
