@@ -293,7 +293,7 @@ export default function Home() {
     <div className={styles.gridContainer}>
 
     <div className={styles.content}>
-        <img className={styles.img2} src={'./gradpic.jpeg'} alt="Graduation"/>
+        <img className={styles.img2} src={'./uwPicture.jpeg'} alt="UW Campus"/>
       </div>
     <div className={styles.content}>
         <h2 style={{ color: '#0f0e33' }}>University of Washington</h2>

@@ -183,12 +183,6 @@
   height: 3vw;
 }
 
-.img2{
-  width: 100%; /* Make the image take up the full width of its container */
-  height: 100%; /* Make the image take up the full height of its container */
-  object-fit: cover; /* Crop the image to cover the container */
-}
-
 .img3{
   height: 40vh;
   max-height: 30vw;
@@ -226,6 +220,8 @@
 .col2 p {
   font-size: 2.5vh;
 }
+
+
 .card {
   margin: 0.5vh;
   padding: 1.0vh;
@@ -237,6 +233,7 @@
     color 0.15s ease,
     border-color 0.15s ease;
 }
+
 
 .parentContainer {
   display: flex;
