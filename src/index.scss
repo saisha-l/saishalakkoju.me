@@ -8,6 +8,12 @@ body {
   font-size: 1.1rem !important;
 }
 
+
+p, a, h1, h2, h3, h4, h5, label {
+  color: #291B14;
+}
+
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace !important;
   font-size: 1rem !important;
@@ -28,9 +34,32 @@ a:hover {
   transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
 }
 
-p, a, h1, h2, h3, h4, h5, label, button {
-  color: white;
-  font-family: "Lato", sans-serif;
+ a, h1, h2, h3, h4, h5, label, button {
+  font-family: "Lexend", sans-serif;
+
+}
+
+h1, h2 {
+  color: rgb(74, 37, 30);
+  font-family: "lexend", serif;
+  font-size: 2rem;
+}
+
+
+h3{
+  color: rgb(42, 63, 97);
+  font-family: "Instrument Serif", serif;
+  font-size: 1.4rem;
+}
+
+
+h4, h5 {
+  font-family: "Lexend", sans-serif;
+}
+
+p{
+  font-family: "Lexend", sans-serif;
+  font-size: 0.95rem;
 }
 
 .navigation-bar {
@@ -85,6 +114,7 @@ p, a, h1, h2, h3, h4, h5, label, button {
 }
 
 .items-container {
+  background-color: #f4f3ee;
   padding: 5% 10%;
   text-align: left;
   display: flex;
@@ -99,12 +129,13 @@ p, a, h1, h2, h3, h4, h5, label, button {
     background-color: #f8f9fa;
   }
 
-  p, a, h1, h2, h3, h4, h5, label, button {
-    color: #0d1116;
-  }
 
+  a{
+    color: #1F3302;
+  }
+  
   a:hover {
-    color: #5000ca;
+    color: #658807;
     transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
   }
 
@@ -113,11 +144,14 @@ p, a, h1, h2, h3, h4, h5, label, button {
   }
 
   .about-section {
-    background-image: url("./assets/images/bg-light.png");
+    background-image: url("./assets/images/bg-new.png");
   }
 
   .skills-container svg {
-    color: #0d1116;
+    color: #549df891;
+    background-color: #000000;
+    border-width: 1cm;
+    border-radius: 100%;
   }
 
   .chip {

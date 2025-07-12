@@ -1,8 +1,9 @@
 .dark-mode .about-section {
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: #ad8b25;
 }
 
 .about-section {
+    background-color: #DCD9D0;
     display: flex;
     gap: 30px;
     justify-content: flex-start;
@@ -10,7 +11,6 @@
     width: 100%;
     padding: 0px 15%;
     min-height: 700px;
-    background-image: url("../images/bg-dark.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -18,6 +18,7 @@
 }
 
 .about-section .content {
+    
     text-align: left;
     z-index: 2;
 
@@ -34,26 +35,37 @@
 
     .mobile_social_icons {
         display: none;
+        color: #1F3302;
     }
 
     p {
         font-size: 1.5em;
+        
         margin-block-start: 0px;
         margin-block-end: 0px;
+        color: #c4d49b;
+
+        font-family: "Instrument Serif", serif;
+        font-weight: 600;
+        font-style: normal;
     }
 
     h1 {
+        font-family: "Lexend", sans-serif;
         font-size: 5em;
         margin-block-start: 0px;
         margin-block-end: 0px;
+       color: #e2e3d3;
     }
 }
 
 .about-section .image-wrapper {
     z-index: 2;
+
     img {
-        width: 150px;
+        width: 200px;
         border-radius: 50%;
+        box-shadow: 0 4px 10px rgba(23, 2, 2, 0.316); 
     }
 }
 
@@ -119,6 +131,7 @@
 
         .social_icons {
             display: none !important;
+            filter: invert(38%) sepia(28%) saturate(4472%) hue-rotate(54deg) brightness(97%) contrast(94%);
         }
 
         .mobile_social_icons {
@@ -126,10 +139,10 @@
             display: flex !important;
             flex-direction: row;
             gap: 10px;
-            color: white;
     
             svg {
                 font-size: 1.8em;
+                filter: invert(38%) sepia(28%) saturate(4472%) hue-rotate(54deg) brightness(97%) contrast(94%);
             }
         }
 

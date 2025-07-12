@@ -1,23 +1,29 @@
+
+
 .skills-container {
+    color: #110702;
     padding: 5% 10%;
     display: flex;
     flex-direction: column;
     text-align: left;
+    background-color: #f4f3ee;
 
     svg {
-        color: white;
-    }
+        filter: invert(14%) sepia(64%) saturate(982%) hue-rotate(48deg) brightness(96%) contrast(98%);    }
 }
   
 .skills-container .skills-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    flex-direction: column;
+    //display: row;
+    //grid-template-columns: repeat(3, 1fr);
     grid-gap: 50px;
+    font-family: "Instrument Serif", serif;
 }
   
 .skills-container .skills-grid .skill {
     align-items: center;
     text-align: left;
+    font-family: "Instrument Serif", serif;
 }
   
 .chip {
@@ -63,9 +69,12 @@
 @media screen {
     @media (max-width: 768px) {
         .skills-container {
+            background-color: #f4f3ee;
             display: block;
             padding-left: 5%;
             padding-right: 5%;
+            font-family: "Lexend", sans-serif;
+
         }
     
         .skills-container .skills-grid {
@@ -74,6 +83,9 @@
         
         .skills-container .skills-grid .skill {
             padding-bottom: 5%;
+            font-family: "Instrument Serif", serif;
+
+
         }
     }
 

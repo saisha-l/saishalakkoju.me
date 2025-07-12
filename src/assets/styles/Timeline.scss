@@ -4,23 +4,49 @@
 }
 
 .vertical-timeline p {
-    color: rgb(39, 40, 34);
+    color: rgb(245, 247, 238);
+}
+
+.vertical-timeline-element--work {
+    transition: max-height 0.6s ease, transform 0.6s ease; // Slower transition
+    max-height: 100px; // Default height for title and subtitle
+    overflow: hidden; // Prevent extra space for hidden content
+}
+
+.vertical-timeline-element--work:hover {
+    transition: transform 2s ease, max-height 0.6s ease; // Ensure both transitions are slow
+    max-height: 300px; // Adjust to fit the title, subtitle, and description
+}
+
+.vertical-timeline-element--work .timeline-description p {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.9s ease, visibility 0.6s ease; // Slower fade-in
+}
+
+.vertical-timeline-element--work:hover .timeline-description p {
+    opacity: 1;
+    visibility: visible;
 }
 
 .vertical-timeline-element p {
-    color: rgb(39, 40, 34);
+    color: rgb(245, 247, 238);
 }
 
 .vertical-timeline-element h3 {
-    color: rgb(39, 40, 34);
+    color:  #c4d49b;
 }
 
 .vertical-timeline-element h4 {
-    color: rgb(39, 40, 34);
+    color: #c4d49bcd;
 }
 
 .vertical-timeline-element span {
     color: rgb(39, 40, 34);
+}
+
+.vertical-timeline-element-content {
+    background-color:  rgb(42, 14, 8);
 }
 
 .vertical-timeline-element .vertical-timeline-element-date {
