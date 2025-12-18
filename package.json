@@ -4,6 +4,7 @@
     "build": "next build",
     "dev": "next dev",
     "start": "next start"
+    "export": "next build && next export"
   },
   "dependencies": {
     "@tsparticles/engine": "^3.5.0",
